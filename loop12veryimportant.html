@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        // 선언부
+        let html='';
+
+        // 처리부
+        html+='<table border="1" width="300" cellspacing="0">';
+        for(let row=1; row<=10; row++) {
+            html += '<tr>';
+                for(let col=1; col<=10; col++) {
+                    if(col<=11-row) {
+                        html += '<td align="center">*</td>';
+                    } else {
+                        html += '<td></td>';
+                    }
+                }
+            html += '</tr>';
+
+        }   
+        html += '</table>';
+
+        // 출력부
+        document.write(html);
+        
+    </script>
+    
+</body>
+</html>
