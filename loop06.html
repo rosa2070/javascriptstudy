@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- table -->
+    <!-- <table border="1" width="600">
+        <tr>
+            <td>1-1열</td>
+            <td>1-2열</td>
+            <td>1-3열</td>
+        </tr>
+        <tr>
+            <td>2-1열</td>
+            <td>2-2열</td>
+            <td>2-3열</td>
+        </tr>
+        <tr>
+            <td>3-1열</td>
+            <td>3-2열</td>
+            <td>3-3열</td>
+        </tr>
+
+    </table> -->
+    
+
+    <script type="text/javascript">
+        console.log('시작');
+
+        document.write( '<table border="1" width="800">');
+        for(let i=1; i<=3; i++) {
+            document.write('<tr>');
+                document.write('<td>' + i + '-1열</td>');
+                document.write('<td>' + i + '-2열</td>');
+                document.write('<td>' + i + '-3열</td>');
+            document.write('<tr>');
+        }
+        document.write('</table>');
+        console.log('끝');
+
+
+    </script>
+    
+</body>
+</html>
