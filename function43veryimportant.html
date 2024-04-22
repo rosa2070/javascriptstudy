@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const open1 = function() {
+            alert('난 경고창'); // 확인 버튼만
+        }
+        const open2 = function() {
+            if (confirm('난 확인창')){
+                console.log('확인');
+            } else {
+                console.log('취소');
+            }
+        };
+
+        const open3 = function() {
+            // prompt('난 입력창');
+            let value = prompt('난 입력값', '초기값');
+            if (value) {
+                console.log('확인', value);
+            } else {
+                console.log('취소');
+            }
+        };
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        // 경고창
+        // alert('난 경고창');
+    </script>
+
+    <input type="button" value="경고창 실행" onclick="open1()"/>
+    <br /><br />
+    <input type="button" value="확인창 실행" onclick="open2()"/>
+    <br /><br />
+    <input type="button" value="입력창 실행" onclick="open3()"/>
+
+</body>
+</html>

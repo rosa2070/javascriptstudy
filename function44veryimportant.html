@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+       
+        const gugudan = function() {
+            let dan = prompt('단수입력');
+
+            // dan - datatype
+            console.log(typeof dan);
+
+            //*(곱하기)는 자동형변환
+            //+(더하기)는 자동형변환 X
+            // 가능하면 명시적 형변환하기!!
+            if (dan) {
+                for(let col=1; col<=9; col++) {
+                    console.log( dan + 'X' + col + '=' + (parseInt(dan)*col));
+                }
+            } else {
+                console.log('취소');
+            }
+        };
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+
+    </script>
+
+    <input type="button" value="구구단 출력" onclick="gugudan()"/>
+
+</body>
+</html>

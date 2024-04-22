@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 한 번 실행
+        // setTimeout() 
+        // 주기적인 실행 (무한루프)
+        // setInterval()
+
+        // 실행할 작업
+        const work = function() {
+            console.log('work 함수 실행');
+        };
+
+        console.log('시작');
+
+        // setTimeout(work, 3000);
+
+        // callback 함수 - 시스템에 의해서 호출되는 함수
+        //setTimeout(function() {
+        setTimeout(() => {
+            console.log('work 함수 실행')
+        }, 3000);
+        // setInterval(work, 3000);
+        console.log('끝');
+    </script>
+
+
+</body>
+</html>
