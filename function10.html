@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const doFunc1 = function() {
+            console.log('Hello Function');
+        };
+
+        const doFunc2 = function(data1) {
+            console.log('Hello Function :', data1);
+        }
+
+        const doFunc3 = function(data1, data2) {
+            let result = data1 + data2;
+            return result;
+        }
+
+        doFunc1();
+        console.log(doFunc1);
+        console.log(typeof doFunc1);
+
+        doFunc2(10);
+
+        console.log(doFunc3(10, 20));
+
+    </script>
+</body>
+</html>

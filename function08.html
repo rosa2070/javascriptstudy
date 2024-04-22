@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function doFunc1(data) {
+            console.log('data :', data);
+        }
+
+        function doFunc2(data=20) {
+            console.log('data :', data);
+        }
+
+        doFunc1(10); // 10
+        doFunc1();   // undefined(X)
+        doFunc2(10);
+        doFunc2();
+    </script>
+</body>
+</html>

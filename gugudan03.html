@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        document.write( '<table border="1" width="800">');
+        for(let row=0; row<=9;row++) {
+            document.write('<tr>');
+            for(let col=0; col<=9; col++) {
+                if(row == 0 && col == 0) {
+                    document.write('<td></td>');
+                } else if (col == 0) {
+                    document.write('<td align="center">' + row + '단 </td>');
+                } else if (row == 0) {
+                    document.write('<td align="center">X' + col + '</td>');
+                } else {
+                    document.write('<td align="center">' + row + 'X' + col + '=' + (row*col) + '</td>');
+
+                }
+            }
+            document.write('</tr>');
+        }
+        document.write( '</table>')
+    </script>
+</body>
+</html>

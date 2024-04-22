@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript">
+        const doFunc = function() {
+            console.log('함수 호출');
+        };
+    </script>
+</head>
+<body>
+    <!-- onclick - html 이벤트 : click -->
+        <input type="button" value="함수 실행" onclick="doFunc()"/>
+        <br/><br/>
+        <button onclick="doFunc()">함수 실행</button>
+        <br/><br/>
+        <a href="javascript:doFunc()">함수 실행</a>
+        <br/><br/>
+        <div class="btn" onclick="doFunc()">함수 실행</div>
+        
+
+</body>
+</html>

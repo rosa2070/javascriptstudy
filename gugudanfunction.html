@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        document.write('<table border="1">');
+
+        document.write('<tr>')
+        for(let col=1; col<=3; col++) {
+            document.write('<td>');
+            gugudan(col);
+            gugudan(col+3);
+            gugudan(col+6);
+            document.write('</td>');
+        }
+        document.write('</tr>')
+        
+        document.write('</table>');
+
+        function gugudan(num) {
+            document.write('<table border="1">');
+            for(let row=1; row<=9; row++) {
+                document.write('<tr>')
+                document.write('<td align="center">'+ num + ' X ' + row + ' = ' + num*row + '</td>');
+                document.write('</tr>');
+            }
+            document.write('</table>');
+        }
+    </script>
+    
+</body>
+</html>

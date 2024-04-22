@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        td {
+            border:1px solid black;
+            width: 100px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        let html = '<table>';
+        let row = 0;
+        do {
+            // 행의 색변화
+            if (row %2 == 0) {
+                html += '<tr bgcolor="#335c85">';
+            } else {
+                html += '<tr bgcolor="#99ADC2">';
+            }
+            let col=0;
+            do {
+                if(row == 0 && col == 0) {
+                    html+='<td></td>';
+                } else if (col == 0) {
+                    html+='<td>' + row + '단 </td>';
+                } else if (row == 0) {
+                    html+='<td>X' + col + '</td>';
+                } else {
+                    html+='<td>' + row + 'X' + col + '=' + (row*col) + '</td>';
+
+                }
+                col++;
+            } while(col<=9);
+            html+='</tr>';
+            row++;
+        } while(row <=9);
+        html+='</table>';  
+
+        document.write(html);
+    </script>
+</body>
+</html>

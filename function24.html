@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 변수/상수의 사용영역
+        "use strict";
+    
+        // 전역변수
+        let var1 = 'test';
+        // let var1 = 'test';
+        console.log('var1 :', var1);    
+        // block
+        {
+            // 지역변수
+            // 제어문 블럭
+            // 함수 블럭
+            let var2 = 'test2';
+            console.log('var2 :', var2);
+            console.log('var1 :', var1);
+        }
+
+        // console.log('var2 :', var2);
+        console.log('var1 :', var1);
+
+    </script>
+</body>
+</html>

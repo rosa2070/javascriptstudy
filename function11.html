@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 상수
+        const subFunc = function() {
+            console.log('Hello Function');
+        };
+
+
+        // callback 함수
+        const mainFunc = function(data) {
+            // data - 함수 형태 자료형
+            //
+
+            for(let i=1; i<=3; i++) {
+                data();
+            }
+        }
+
+        mainFunc(subFunc);
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const doCalculator = function(data1, oper, data2) {
+            let result = 0;
+            switch (oper) {
+                case '+' :
+                    result = data1 + data2;
+                    break;
+                case '-' :
+                    result = data1 - data2;
+                    break;
+                case 'x' :
+                    result = data1 * data2;
+                    break;
+                case '/' :
+                    result = data1 / data2;
+                    break;
+            }
+            return result;
+        }
+
+        console.log(doCalculator(3, 'x', 6));
+  
+    </script>
+</body>
+</html>

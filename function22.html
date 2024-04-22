@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const doFunc1 = function(one) {
+            return one;
+        };
+
+        // 화살표 함수(람다)
+        const doFunc2 = (one, two) => {
+            return one + two;
+        };
+
+        // 3항 연산자
+        const doFunc3 = (one, two) => console.log('doFunc1 호출 :', one, two);
+
+        console.log(doFunc1(10));
+        console.log(doFunc2(20, 30));
+        doFunc3(10, 20);
+    </script>
+</body>
+</html>
