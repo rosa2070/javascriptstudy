@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 메서드
+        class Student {
+            name = '박문수';
+
+            showStudent() {
+                // this : 자기참조
+                console.log('Hello showStudent()', name);
+                console.log('Hello showStudent()', this.name);
+
+                // 지역변수
+                let name = '박문수';
+            }
+        }
+
+        let stu1 = new Student();
+        stu1.showStudent();
+    </script>
+</body>
+</html>

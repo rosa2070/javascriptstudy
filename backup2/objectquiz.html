@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        class Student {
+            constructor(name, hakbun, kor, eng, mat) {
+                this.name = name;
+                this.hakbun = hakbun; 
+                this.kor = kor;
+                this.eng = eng;
+                this.mat = mat;
+            }
+
+            getSum() {
+                return this.kor + this.eng + this.mat;
+            }
+
+            getAvg() {
+                return this.getSum() / 3.0;
+            }
+        }
+
+        // 클래스 인스턴스 생성
+let student1 = new Student('Alice', '2021001', 90, 85, 95);
+let student2 = new Student('Bob', '2021002', 80, 75, 85);
+
+// 총점 및 평균 출력
+console.log(`${student1.name}의 총점은 ${student1.getSum()}이고 평균은 ${student1.getAvg()}입니다.`);
+console.log(`${student2.name}의 총점은 ${student2.getSum()}이고 평균은 ${student2.getAvg()}입니다.`);
+
+        
+    </script>
+</body>
+</html>

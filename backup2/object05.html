@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        class Student {
+            name = '박문수';
+            kor = 90;
+            mat = 90;
+
+            // 생성자
+            // 클래스를 생성할 값의 초기화
+            constructor() {
+                console.log('생성자 호출');
+
+                this.name = '박문수';
+                this.kor = 92;
+                this.mat = 94;
+
+            }
+
+            showStudent() {
+                console.log('Hello showStudent()', this.name);
+
+
+            }
+        }
+
+        // new + 생성자
+        let stu1 = new Student();
+        stu1.showStudent();
+        console.log(stu1.name);
+        console.log(stu1.kor);
+    </script>
+</body>
+</html>

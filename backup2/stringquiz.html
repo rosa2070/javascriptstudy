@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const capitalize = function(name) {
+            let nameArr = name.split(' ');
+            let newNameArr ='';
+            for (let name of nameArr) {
+                let Upper = name[0].toUpperCase();
+                let newName = Upper + name.substr(1);
+                newNameArr += newName + ' ';
+            }
+            return newNameArr;
+        }
+
+        console.log(capitalize('hi nice to meet you'));
+    </script>
+
+    
+</body>
+</html>

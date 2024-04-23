@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+      // 클래스 선언
+      let Student = function(name, kor, mat) {
+        this.name = name;
+        this.kor = kor;
+        this.mat = mat;
+
+        this.getSum = function() {
+            return this.kor + this.mat;
+        }
+
+      };
+
+      let stu1 = new Student('홍길동', 90, 92);
+      let stu2 = new Student('박문수', 92, 94);
+
+      console.log(stu1.name, stu1.kor);
+      console.log(stu2.name, stu2.kor);
+
+      console.log(stu1.getSum());
+      console.log(stu2.getSum());
+    </script>
+</body>
+</html>

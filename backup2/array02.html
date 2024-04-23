@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 문자배열 => 문자열
+        let arr1 = ['a', 'b', 'c', 'd'];
+        let arr2 = ['abc', 'bcd', 'cde', 'def'];
+
+        let str1 = 'abc';
+
+        console.log(arr1[0]);
+        console.log(arr2[0]);
+
+        console.log(str1[0]);
+        console.log(str1.length);
+
+        // 기본 반복문
+        for(let i=0; i<arr2.length; i++) {
+            console.log(arr2[i]);
+        }
+
+        // 인덱스 추출용
+        for (let i in arr2) {
+            console.log(i, arr2[i]);
+        }
+
+        // 데이터 추출용
+        for (let v of arr2) {
+            console.log(v);
+        }
+
+        for (let v of 'abc') {
+            console.log(v);
+        }
+
+    </script>
+</body>
+</html>

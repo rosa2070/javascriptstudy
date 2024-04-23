@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 배열도 object 
+        let arr1 = [];  // array 표기
+
+        // class - 인스턴스화(new)
+        let obj1 = {};  // object 표기
+
+        console.log(typeof obj1);
+
+        let stu1 = {
+            name: '박문수',
+            kor: 90,
+            mat: 80,
+
+            getSum: function() {
+                console.log('getSum 호출');
+            }
+        };
+
+        console.log(stu1);
+        console.log(stu1.name);
+        console.log(stu1.kor);
+
+        console.log(stu1['name']);
+
+        stu1.name = '홍길동';
+        console.log(stu1.name);
+
+        stu1.getSum();
+
+    </script>
+    
+</body>
+</html>

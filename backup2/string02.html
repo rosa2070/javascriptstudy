@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // String - 문자열 조작 객체
+
+        let str = 'Hello String 안녕 String';
+
+        // 문자열의 길이
+        let strLength = str.length;
+        console.log(strLength);
+
+        // 문자/문자열 분리(추출)
+        console.log(str[0]);
+        console.log(str.charAt(0));
+
+        // 마지막 문자 분리
+        console.log(str[str.length-1]);
+        console.log(str.charAt(str.length-1));
+
+        // substr / substring / slice
+        console.log(str.substr(6));
+        console.log(str.substr(6, 5));
+        console.log(str.substr(6, 12));
+        console.log(str.slice(6, 12));
+
+        // 검색 - 위치
+        // let str = 'Hello String 안녕 String';
+        console.log(str.indexOf('S'));
+        console.log(str.indexOf('v'));
+        console.log(str.indexOf('S', 7));
+        console.log(str.lastIndexOf('S'));
+
+        // 검색 - 확인 : true/false
+        // includes, startsWith, endsWith
+        console.log(str.startsWith('Hello'));
+        console.log(str.startsWith('hello'));
+
+        // 대소문자 변환
+        // toUpperCase() / toLowerCase()
+        console.log('abc'.toUpperCase());
+        console.log('ABC'.toLowerCase());
+
+        // 문자열 치환
+        console.log(str.replace('Hello', '안녕'));
+    </script>
+</body>
+</html>

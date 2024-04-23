@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const scores1 = [
+            [100, 100, 100],
+            [20, 20, 20],
+            [30, 30, 30],
+            [40, 40, 40],
+            [50, 50, 50]
+        ];
+
+        const scores2 = [
+            [0, 0, 0, 0, 0.0],
+            [0, 0, 0, 0, 0.0],
+            [0, 0, 0, 0, 0.0],
+            [0, 0, 0, 0, 0.0],
+            [0, 0, 0, 0, 0.0]
+        ];
+
+        // 처리
+        for (let i=0; i<scores1.length; i++) {
+            let sum = 0;
+            let avg = 0.0;
+            for (let j=0; j<scores1[i].length; j++) {
+                scores2[i][j] = scores1[i][j];
+                sum += scores1[i][j];
+            }
+            scores2[i][3] = sum;
+            scores2[i][4] = sum / scores1[i].length;
+        }
+
+        console.log(scores2);
+    </script>
+    
+</body>
+</html>

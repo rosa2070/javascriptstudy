@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 항상 최대값을 출력한 viewMaxNumber() 함수 선언
+        const viewMaxNumber = function() {
+            let maxValue = 0;
+            /*
+            for (let i=0; i<arguments.length; i++) {
+                if (maxValue < arguments[i]) {
+                    maxValue = arguments[i];
+                }
+            }
+            */
+            for (let value of arguments) {
+                if (value >= maxValue) {
+                    maxValue = value;
+                }
+            }
+            console.log(maxValue);
+        }
+
+        viewMaxNumber(1,2);
+        viewMaxNumber(1, 3, 2);
+        viewMaxNumber(1,4,8,  5, 2);
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 자바 책 151쪽 변형문제 -->
+    <script type="text/javascript">
+        let score = [
+            [100, 100, 100],
+            [20, 20, 20],
+            [30, 30, 30],
+            [40, 40, 40],
+            [50, 50, 50]
+        ];
+        
+        let html = '<table border="1">';
+        html += '<tr>';
+        html += '<td>번호</td>';
+        html += '<td>국어</td>';
+        html += '<td>영어</td>';
+        html += '<td>수학</td>';
+        html += '<td>총점</td>';
+        html += '<td>평균</td>';
+        html += '</tr>';
+
+        for (let row=1; row<=5; row++) {
+            html += '<tr>';
+            html += '<td align="center">' + row + '</td>';
+            let sum = 0;
+            for(let i=0; i<3; i++) {
+                html += '<td>' + score[row-1][i] + '</td>';
+                sum += score[row-1][i];
+            }
+            // 총점
+            html += '<td>' + sum + '</td>';
+            //평균
+            html += '<td>' + sum / score[row-1].length + '</td>';
+
+            html += '</tr>';
+        }
+        
+        html += '<tr>';
+        html += '<td>총점</td>';        
+        let koreasum = 0;
+        for (let i=0; i<score.length; i++) {
+            koreasum += score[i][0];
+        }
+        html += '<td>' + koreasum + '</td>';
+
+
+        let englishsum = 0;
+        for (let i=0; i<score.length; i++) {
+            englishsum += score[i][0];
+        }
+        html += '<td>' + englishsum + '</td>';
+
+
+        let mathsum = 0;
+        for (let i=0; i<score.length; i++) {
+            mathsum += score[i][0];
+        }
+        html += '<td>' + mathsum + '</td>';
+
+
+        html += '<td></td>';
+        html += '<td></td>';
+        
+        html += '</tr>';
+        html += '</table>';
+
+        document.write(html);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // String - 문자열 조작 객체
+
+        let str = 'Hello String 안녕 String';
+        // 문자열 결합
+        console.log( str.concat(1, 2, 3));
+
+        // 문자열 양끝에 공백 제거
+        console.log('       test      '.trim());
+
+        // 구분자에 중심에 문자열 분리
+        let str2 = '사과,딸기,수박,참외';
+        let arr1 = str2.split(',');
+        console.log(arr1);
+        console.log(arr1[0]);
+        // arr1 전체 for문 기술
+        for(let fruit of arr1) {
+            console.log(fruit);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 인자의 갯수가 미정
+        // 가변인자 함수
+        const doFunc1 = function() {
+            // arguments - 인자들의 값을 모은 배열
+            console.log('call doFunc() : ', arguments);
+            console.log('call doFunc() : ', arguments.length);
+
+            console.log(arguments[0]);
+            console.log(arguments[1]);
+        };
+
+        doFunc1(10, 20);
+        doFunc1(10, 20, 30);
+    </script>
+</body>
+</html>
