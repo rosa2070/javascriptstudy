@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 주민등록번호 검사
+
+        // 입력구문 생략
+        let strJumin = '111111-1111111';
+        strJumin = strJumin.replace('-', '');
+       
+        // console.log(strJumin);
+
+        let num01 = parseInt(strJumin.substring(0, 1)) * 2;
+        let num02 = parseInt(strJumin.substring(1, 2)) * 3;
+        let num03 = parseInt(strJumin.substring(2, 3)) * 4;
+        let num04 = parseInt(strJumin.substring(3, 4)) * 5;
+        let num05 = parseInt(strJumin.substring(4, 5)) * 6;
+        let num06 = parseInt(strJumin.substring(5, 6)) * 7;
+        let num07 = parseInt(strJumin.substring(6, 7)) * 8;
+        let num08 = parseInt(strJumin.substring(7, 8)) * 9;
+        let num09 = parseInt(strJumin.substring(8, 9)) * 2;
+        let num10 = parseInt(strJumin.substring(9, 10)) * 3;
+        let num11 = parseInt(strJumin.substring(10, 11)) * 4;
+        let num12 = parseInt(strJumin.substring(11, 12)) * 5;
+
+        // check
+        let lastNum = parseInt(strJumin.substring(12, 13));
+
+        // console.log(num01, num02, num03, num04, num05, num13);
+        let sum = num01 + num02 + num03 + num04 + num05 + num06 + 
+            num07 + num08 + num09 + num10 + num11 + num12;
+
+        let resultNum = (11 - (sum % 11)) % 10;
+
+        console.log(lastNum, resultNum);
+
+    </script>
+    
+</body>
+</html>

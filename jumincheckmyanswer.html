@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const checksum = function(rrn) {
+            if (rrn.length != 14) {
+                console.log('14자리를 입력해주세요');
+            }
+
+            let frontrrn = rrn.substring(0, 6);
+            let backrrn = rrn.substring(7,rrn.length-1);
+            let lastnum = rrn.substring(rrn.length-1);
+            newrrn = frontrrn + backrrn; 
+
+            let sum = 0;
+            for(let i=0; i<8; i++) {
+                sum += newrrn[i]*(i+2);
+            }
+
+            for(let i=8;i<newrrn.length; i++) {
+                sum += newrrn[i]*(i-6);
+            }
+
+            let remain = sum % 11;
+            remain = 11 - remain;
+            remain = remain % 10;
+            
+            if (lastnum == remain) {
+                console.log('번호형식이 정확합니다.');
+            } else {
+                console.log('번호형식이 부정확합니다.');
+            }
+
+
+        }
+
+        checksum('123456-1222331');
+
+    </script>
+</body>
+</html>

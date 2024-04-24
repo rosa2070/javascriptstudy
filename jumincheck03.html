@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let strJumin = '123456-1234567';
+        strJumin = strJumin.replace('-', '');
+
+        const bits = [2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5];
+
+        let sum = 0;
+        for (let i=0; i<bits.length; i++) {
+            // console.log(parseInt(strJumin.substring(i, i+1)) * bits[i]);
+            sum += parseInt(strJumin.substring(i, i+1)) * bits[i];
+        }
+
+        let lastNum = parseInt(strJumin.substring(12, 13));
+
+        let resultNum = (11 - (sum % 11)) % 10;
+
+        console.log(lastNum, resultNum);
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 주민등록번호 검사
+
+        // 입력구문 생략
+        let strJumin = '123456-1234567';
+        strJumin = strJumin.replace('-', '');
+       
+        // console.log(strJumin);
+
+        let num01 = strJumin.substring(0, 1);
+        let num02 = strJumin.substring(1, 2);
+        let num03 = strJumin.substring(2, 3);
+        let num04 = strJumin.substring(3, 4);
+        let num05 = strJumin.substring(4, 5);
+        let num06 = strJumin.substring(5, 6);
+        let num07 = strJumin.substring(6, 7);
+        let num08 = strJumin.substring(7, 8);
+        let num09 = strJumin.substring(8, 9);
+        let num10 = strJumin.substring(9, 10);
+        let num11 = strJumin.substring(10, 11);
+        let num12 = strJumin.substring(11, 12);
+
+        // check
+        let lastNum = strJumin.substring(12, 13);
+
+        console.log(num01, num02, num03, num04, num05, num12);
+
+    </script>
+    
+</body>
+</html>
