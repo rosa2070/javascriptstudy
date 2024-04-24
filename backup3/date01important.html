@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 시스템 통해서 현재 날짜와 시간에 접근
+        // 달력
+
+        // 현재 시간
+        let today = new Date();
+
+        // 영어
+        console.log(today);
+        // 브라우저 설정된 국가
+        console.log(today.toLocaleString());
+
+        let strToday = today.toLocaleString();
+        console.log(strToday);
+
+        // 년월일 분리 ..
+        console.log(strToday.substring(0, 11));
+
+        // 메서드를 제공
+        console.log(today.getFullYear());
+        // 0 -> 1월
+        console.log(today.getMonth());
+        console.log(today.getDate());
+        // 0 -> 일요일
+        console.log(today.getDay());
+        // timestamp : 프로그램 내부에서 시간 처리 방식
+        // 초 - 밀리초
+        console.log(today.getTime());
+    </script>
+</body>
+</html>

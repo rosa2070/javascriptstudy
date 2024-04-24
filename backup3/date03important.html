@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let date1 = new Date(2024, 5-1, 1);
+        let date2 = new Date(2024, 5-1, 9);
+
+        // 차이 - 년도 월 일 시간 분 ...
+        // timestamp
+        let interval1 = date2 - date1;
+        console.log(interval1);         // 691200000
+        let interval2 = date2.getTime() - date1.getTime();
+        console.log(interval2);    
+
+        // 일의 차이로 변경
+        let dateInterval1 = interval1/(1000*60*60*24);
+        console.log(dateInterval1);
+
+        let dataInterval2 = date2.getDate() - date1.getDate();
+        console.log(dataInterval2);
+
+    </script>
+    
+</body>
+</html>

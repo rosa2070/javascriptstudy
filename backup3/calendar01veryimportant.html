@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const year = 2024;
+        const month = 4;
+
+        const startCalendar = new Date(2024, month-1, 1); // 첫 날
+        const endCalendar = new Date(2024, month, 1-1); // 마지막 날
+
+        // 1 - 일요일
+        const startDayOfWeek = startCalendar.getDay() + 1;
+        // 마지막 일 
+        const endDate = endCalendar.getDate();
+        const endDayOfWeek = endCalendar.getDay() + 1;
+
+        console.log( ' SU MO TU WE TH FR SA');
+
+        let strCalendar = '';
+        // 1일 까지의 공백
+        for(let i=1; i<startDayOfWeek; i++) {
+            strCalendar += '   ';               // 3
+        }
+
+        for( let i=1, n=startDayOfWeek; i<=endDate; i++, n++) {
+
+            // 출력화면을 위한 처리
+            strCalendar += (i<10) ? '  ' + i : ' ' + i;
+
+            // 토요일마다 엔터키 입력
+            if ( n % 7 == 0) {
+                strCalendar += '\n';
+            }
+        }
+
+        console.log(strCalendar);
+    </script>
+</body>
+</html>

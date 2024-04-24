@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let date1 = new Date(2024, 5-1, 1, 10, 10, 40);
+        console.log(date1.toLocaleString());
+
+        let date2 = new Date(2024, 5-1, 1, 10, 10, 40);
+        console.log(date1.toLocaleString());
+
+        let date3 = new Date();
+        let date4 = new Date(date3.getTime());
+        console.log(date4.toLocaleString());
+
+        // 달의 첫날 : 1
+        // 달의 마지막 날: ?
+
+        let date5 = new Date(2024, 6-1, 1-1); // 1의 전날은 전 달의 마지막 날
+        console.log(date5.toLocaleString());
+
+        // 24년 12월 24일 요일
+        let date6 = new Date(2024, 12-1, 24);
+        // console.log(date6.getDay());
+        switch(date6.getDay()) {
+            case 0:
+                console.log('일요일');
+                break;
+            case 1:
+                console.log('월요일');
+                break;
+            case 2:
+                console.log('화요일');
+                break;
+            case 3:
+                console.log('수요일');
+                break;
+            case 4:
+                console.log('목요일');
+                break;
+            case 5:
+                console.log('금요일');
+                break;
+            case 6:
+                console.log('토요일');
+                
+        }
+
+    </script>
+    
+</body>
+</html>
