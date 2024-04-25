@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const checkfrm = function() {
+            // option들의 묶음
+            console.log(document.frm1.sel.options);
+            console.log(document.frm1.sel.options.length);
+
+            console.log(document.frm1.sel.options.selectedIndex);
+
+            console.log(document.frm1.sel.options[document.frm1.sel.options.selectedIndex].text);
+            console.log(document.frm1.sel.options[document.frm1.sel.options.selectedIndex].value);
+        };
+
+        const changefrm = function() {
+            document.frm1.sel.options.selectedIndex = 3;
+        };
+
+    </script>
+</head>
+<body>
+    <form name="frm1">
+        <select name="sel">
+            <option value="1">사과</option>
+            <option value="2" selected>수박</option>
+            <option value="3">딸기</option>
+            <option value="4">참외</option>
+        </select>
+        <br/><br/>
+    </form>
+    <input type="button" value="내용읽기" onclick="checkfrm()" />
+    <input type="button" value="내용수정" onclick="changefrm()" />
+</body>
+</html>

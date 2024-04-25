@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const set = new Set();
+
+        set.add( '사과' ).add( '수박' ).add( '딸기' );
+
+        console.log( set.has( '수박' ) );
+        console.log( set.has( '참외' ) );
+
+        console.log( '갯수 :', set.size );
+
+        set.delete( '수박' );
+        console.log( '갯수 :', set.size );
+
+        set.clear();
+        console.log( '갯수 :', set.size );
+    </script>
+</body>
+</html>

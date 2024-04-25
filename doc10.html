@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const checkfrm = function() {
+            let num1 = parseInt(document.frm1.num1.value);
+            let num2 = parseInt(document.frm1.num2.value);
+            switch(document.frm1.oper.value) {
+                case '0':
+                    document.frm1.result.value = num1 + num2;
+                    break;
+                case '1': 
+                    document.frm1.result.value = num1 - num2;    
+                    break;               
+                case '2':
+                    document.frm1.result.value = num1 * num2;     
+                    break;
+                case '3':
+                    document.frm1.result.value = num1 / num2;              
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <!-- form 입력 내용 검사 -->
+    <form name="frm1">
+        <input type="text" name="num1" placeholder="값입력"/>
+        <select name="oper">
+            <option value="0">+</option>
+            <option value="1">-</option>
+            <option value="2">X</option>
+            <option value="3">/</option>
+        </select>
+        <input type="text" name="num2" placeholder="값입력"/>
+        =
+        <input type="text" name="result" readonly/>
+        &nbsp;
+        <input type="button" value="계산하기" onclick="checkfrm()" />
+    </form>
+
+</body>
+</html>

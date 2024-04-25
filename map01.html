@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // map - 인덱스:값 => [키:값][키:값]
+
+        const map = new Map();
+        console.log(map);
+        console.log(typeof map);
+
+        // 키는 중복 허용 X
+        // 같은 키 나오면 overwrite
+        const map1 = new Map([
+                               ['key1', '사과'], 
+                               ['key2', '수박'], 
+                               ['key3', '딸기'],
+                               ['key1', '참외']]);
+
+        console.log(map1);
+        console.log(map1.size);
+
+        for(let data of map1) {
+            console.log(data);
+            console.log(data[0], data[1]);
+        }
+
+        console.log(map1.get('key1'));
+        console.log(map1.get('key2'));
+
+        // 간단한(편법적) map 구조
+        let map2 = [
+            {key:1, value:10},
+            {key:2, value:20},
+            {key:3, value:30}
+        ];
+
+        console.log(map2);
+        console.log(map2[0]['key']);
+        console.log(map2[0]['value']);
+    </script>
+    
+</body>
+</html>

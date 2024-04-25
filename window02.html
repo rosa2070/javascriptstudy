@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        let child;
+        const openWindow = function() {
+            child = open('./lotto01.html', 'winopen', 'top=100,left100,width=640, height=960');
+        }
+
+        // 5초 후 자동 창닫기
+        const openWindow2 = function() {
+            child = open('./lotto01.html', 'winopen', 'top=100,left=100,width=640,height=960')
+            setTimeout(function() {
+                child.close();
+            }, 5000);
+        }
+
+        const closeWindow = function() {
+            child.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="창열기" onclick="openWindow()" />
+    <br/><br/>
+    <input type="button" value="자동 창닫기" onclick="openWindow2()" />
+    <br/><br/>
+    <input type="button" value="창닫기" onclick="closeWindow()" />
+</body>
+
+</html>

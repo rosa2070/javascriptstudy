@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let doFunc1 = function() {
+            console.log( 'doFunc1() 호출' );
+        }
+
+        let doFunc2 = function() {
+            console.log( 'doFunc2() 호출' );
+        }
+
+        //doFunc1();
+        //doFunc2();
+
+        let set = new Set();
+
+        set.add( doFunc1 );
+        set.add( doFunc2 );
+
+        //console.log( set );
+
+        for( let doFunc of set ) {
+            doFunc();
+        }
+    </script>
+</body>
+</html>

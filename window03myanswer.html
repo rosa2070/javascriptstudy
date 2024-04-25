@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        let child;
+        const openWindow = function() {
+            child = open('./lotto01.html', 'winopen', 'top=100,left100,width=640, height=960');
+        }
+
+        const closeWindow = function() {
+            child.close();
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="창열기" onclick="openWindow()" />
+    <br/><br/>
+    <!-- 5초후 자동 창닫기 -->
+    <script type="text/javascript">
+        setTimeout(closeWindow, 5000);
+    </script>
+    
+</body>
+
+</html>

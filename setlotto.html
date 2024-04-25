@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const set = new Set();
+        while(set.size < 30) {
+            set.add(parseInt(Math.random()*45) + 1);
+        }
+        // for (let num of set) {
+        //     console.log(num);
+        // }
+
+        let html = '<table border="1" width="600">';
+        let count=0;
+        for (let num of set) {
+            count++;
+            if(count % 6 == 1) {
+                html += '<tr>';
+            }
+            html += '<td>' + num + '</td>';
+            if(count %6 == 0) {
+                html +='</tr>';
+            }
+        }
+        html += '</table>';
+
+        document.write(html);
+    </script>
+    
+</body>
+</html>

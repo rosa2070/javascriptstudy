@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Student 선언
+        class Student {
+            constructor(name, kor, mat) {
+                this.name = name;
+                this.kor = kor;
+                this.mat = mat;
+            }
+
+            getStudent() {
+                console.log(this.name);
+                console.log(this.kor);
+                console.log(this.mat);
+            }
+        }
+
+        let stu1 = new Student('홍길동', 90, 92);
+        let stu2 = new Student('박문수', 92, 94);
+
+        // console.log(stu1.name);
+        // console.log(stu2.name);
+
+        // stu1.getStudent();
+        // stu2.getStudent();
+
+        let set = new Set();
+
+        set.add(stu1);
+        set.add(stu2);
+
+        // console.log(set);
+
+        for(let stu of set) {
+            // console.log(stu.name);
+            console.log(stu.getStudent());
+        }
+  
+    </script>
+</body>
+</html>

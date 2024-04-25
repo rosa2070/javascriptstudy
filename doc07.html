@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const checkfrm = function() {
+            // check : checked된 상태 boolean으로 파악
+            /*
+            console.log(document.frm1.ch1.checked);
+            console.log(document.frm1.ch2.checked);
+            console.log(document.frm1.ch3.checked);
+            console.log(document.frm1.ch4.checked);
+
+            console.log(document.frm1.ch1.value);
+            console.log(document.frm1.ch2.value);
+            console.log(document.frm1.ch3.value);
+            console.log(document.frm1.ch4.value);
+            */
+
+            if( document.frm1.ch1.checked ) console.log(document.frm1.ch1.value);
+            if( document.frm1.ch2.checked ) console.log(document.frm1.ch2.value);
+            if( document.frm1.ch3.checked ) console.log(document.frm1.ch3.value);
+            if( document.frm1.ch4.checked ) console.log(document.frm1.ch4.value);
+        };
+    </script>
+</head>
+<body>
+    <form name="frm1">
+        <input type="checkbox" name="ch1" value="사과">사과</br>
+        <input type="checkbox" name="ch2" value="수박" checked>수박</br>
+        <input type="checkbox" name="ch3" value="딸기">딸기</br>
+        <input type="checkbox" name="ch4" value="참외">참외</br>
+        <br/>
+        <input type="button" value="내용읽기" onclick="checkfrm()" />
+    </form>
+</body>
+</html>

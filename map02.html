@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const map = new Map();
+        map.set('key1', '사과');
+        map.set('key2', '수박').set('key3', '딸기');
+
+        console.log(map);
+
+        console.log(map.get('key1'));
+        
+        for(let [key, value] of map) {
+            console.log(key, value);
+        }
+
+        // has
+
+        console.log(map.has('key1'));
+        console.log(map.has('key4'));
+
+        // key값 추출
+        // MapIterator(반복자)
+        let objkeys = map.keys();
+        console.log(objkeys);
+        // console.log(objkeys.next());
+        // console.log(objkeys.next());
+        for (let key of objkeys) {
+            console.log(key);
+        }
+
+        for(let value of map.values()) {
+            console.log(value);
+        }
+
+        map.delete('key1');
+        console.log(map.size);
+
+        map.clear();
+        console.log(map.size);
+
+    </script>
+    
+</body>
+</html>
