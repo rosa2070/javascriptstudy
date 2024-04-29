@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const viewCalendar = function() {
+            // year / month가 입력이 안되면 현재월
+            // 그렇지 않으면 입력월
+            const year = document.frm.year.value;
+            const month = document.frm.month.value;
+
+            console.log(year, month);
+
+            const startCalendar = new Date( 2024, month-1, 1 );
+            const endCalendar = new Date( 2024, month, 1-1 );
+            const nowCalendar = new Date();
+
+            const startDayOfWeek = startCalendar.getDay() + 1; 
+            const endDate = endCalendar.getDate();
+            const endDayOfWeek = endCalendar.getDay() + 1; 
+
+            let html = '<table border="1" width="800" height="600" cellspacing="0">';
+            html += '<tr>';
+            html += '<th>일요일</th>';
+            html += '<th>월요일</th>';
+            html += '<th>화요일</th>';
+            html += '<th>수요일</th>';
+            html += '<th>목요일</th>';
+            html += '<th>금요일</th>';
+            html += '<th>토요일</th>';
+            html += '</tr>';
+
+            html += '<tr>';
+            for( let i=1 ; i<startDayOfWeek ; i++ ) {
+                html += '<td></td>';
+            }
+
+            for( let i=1, n=startDayOfWeek ; i<=endDate ; i++, n++ ) {
+                if( n % 7 == 1 ) {
+                    html += '<tr>';
+                }
+
+                html += '<td>' + i + '</td>';
+
+                if( n % 7 == 0 ) {
+                    html += '</tr>';
+                }
+            }
+
+            for( let i=endDayOfWeek ; i<=6 ; i++ ) {
+                html += '<td></td>';
+            }
+
+            html += '</tr>';
+            html += '</table>';
+
+            const div = document.getElementById( 'result' );
+            div.innerHTML = html;
+        };
+
+        // html 로딩되면 자동실행
+        window.onload = function() {
+            viewCalendar();
+        };
+    </script>
+</head>
+<body>
+
+<table>
+<tr>
+    <td>
+        <form name='frm'>
+            <input type="text" name="year">
+            &nbsp;년
+            &nbsp;&nbsp;
+            <input type="text" name="month">
+            &nbsp;월
+            &nbsp;&nbsp;
+            <input type='button' value='달력보기' onclick='viewCalendar()' />
+        </form>
+    </td>
+</tr>
+</table>
+    
+<br /><hr /><br />
+
+<div id="result"></div>
+
+</body>
+</html>

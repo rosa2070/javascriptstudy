@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        table {
+            border: 1px solid gray;
+            border-collapse: collapse;
+        } 
+        td {
+            padding: 15px;
+            border: 1px solid gray;
+        }
+
+        .td1, .td2 {
+            text-align: center;
+        }
+    </style>
+    <script type="text/javascript">
+
+        // 정답인 숫자 랜덤으로
+        const ansnum1 = parseInt(Math.random()*10);
+        const ansnum2 = parseInt(Math.random()*10);
+        const ansnum3 = parseInt(Math.random()*10);
+        const answer = '' + ansnum1 + ansnum2 + ansnum3;
+        console.log(answer);
+
+        const viewGame = function() {
+
+        
+            html = '';
+            for( let i=1 ; i<=9 ; i++ ) {
+                html += '<tr>';
+                html += '<td class="td1">';
+                html += '<input type="text" name="n' + i + '1" size="5" />';
+                html += '<input type="text" name="n' + i + '2" size="5" />';
+                html += '<input type="text" name="n' + i + '3" size="5" />';
+                html += '</td>';
+                html += '<td class="td2">';
+                html += '<input type="button" id="btn' + i + '" value="' + i + '회" />';
+                html += '</td>';
+                html += '<td class="td3">';
+                // 아래 부분을 함수로 생성?? 결과 : 바뀌도록
+                html += '<div id="result' + i + '">결과 : 0 B / 0 S / 0 O</div>';
+                html += '</td>';
+                html += '</tr>';
+            }
+            
+            html += '<tr>';
+            html += '<td class="td1"></td>';
+            html += '<td class="td2"></td>';
+            html += '<td class="td3">';
+            html += '<div id="result9">결과 : </div>';
+            html += '</td>';
+            html += '</tr>';
+
+            document.getElementById( 'table' ).innerHTML = html;
+        };
+
+        window.onload = function() {
+            viewGame();
+
+            document.getElementById( 'btn1' ).onclick = function() {
+
+                console.log(document.getElementById('result9').textContent );
+
+                // 입력받은 숫자
+                const n11 = document.getElementsByName('n11')[0].value;
+                const n12 = document.getElementsByName('n12')[0].value;
+                const n13 = document.getElementsByName('n13')[0].value;
+
+                let ball = 0;
+                let strike = 0;
+                let out = 0;
+
+                // 정답 맞췄을 때
+                if (n11 == answer[0] && n12 == answer[1] && n13 == answer[2]) {
+                    // document.getElementById('result9').textContent 
+                }
+            
+                if (n11 == n12 || n11 == n13 || n12 == n13) {
+                    alert('중복되지 않는 숫자여야 합니다.');
+                } else {
+                    // strike인 경우
+                    if (n11 == answer[0]) {
+                        strike++;
+                    } 
+                    if (n12 == answer[1]) {
+                        strike++;
+                    }
+                    if (n13 == answer[2]) {
+                        strike++;
+                    }
+
+                    // ball인 경우
+                    if (answer.includes(n11) && n11 != answer[0]){
+                        ball++;
+                    }
+                    if (answer.includes(n12) && n12 != answer[1]){
+                        ball++;
+                    }
+                    if (answer.includes(n13) && n13 != answer[2]){
+                        ball++;
+                    }
+
+                    // out인 경우
+                    if(!answer.includes(n11)) {
+                        out++;
+                    }
+                    if(!answer.includes(n12)) {
+                        out++;
+                    }
+                    if(!answer.includes(n13)) {
+                        out++;
+                    }
+
+                    // 문자열은 변경 불가이므로 새로운 텍스트를 만들자
+                    document.getElementById('result1').textContent = '결과 : ' + ball + ' B / ' + strike + ' S / ' + out + ' O';
+                 
+                }
+            };
+
+            document.getElementById( 'btn2' ).onclick = function() {
+                alert( 'btn2' );
+            };
+
+            document.getElementById( 'btn3' ).onclick = function() {
+                alert( 'btn3' );
+            };
+
+            document.getElementById( 'btn4' ).onclick = function() {
+                alert( 'btn4' );
+            };
+
+            document.getElementById( 'btn5' ).onclick = function() {
+                alert( 'btn5' );
+            };
+
+            document.getElementById( 'btn6' ).onclick = function() {
+                alert( 'btn6' );
+            };
+
+            document.getElementById( 'btn7' ).onclick = function() {
+                alert( 'btn7' );
+            };
+
+            document.getElementById( 'btn8' ).onclick = function() {
+                alert( 'btn8' );
+            };
+
+            document.getElementById( 'btn9' ).onclick = function() {
+                alert( 'btn9' );
+            };
+        };
+    </script>
+</head>
+<body>
+<table id="table" >
+</table>
+</body>
+</html>

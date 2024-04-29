@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('btn1').onclick = function() {
+                // alert('click');
+
+                const d1 = document.getElementById('d1');
+                d1.style.border = '1px solid blue';
+                d1.style.color = 'orange';
+            };
+
+            document.getElementById('btn2').onclick = function() {
+                // console.log(d1.style);
+                console.log(d1.style.border);
+
+                d1.style.border = '';
+            };
+        }
+    </script>
+</head>
+<body>
+    <input type="button" id="btn1" value="style 추가" />
+    <input type="button" id="btn2" value="style 삭제" />
+    <br /><hr /><br />
+    <div id="d1">Hello Style</div>
+
+</body>
+</html>

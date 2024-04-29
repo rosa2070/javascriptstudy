@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const createAttr = function() {
+            let img = document.createElement('img');
+            // img.setAttribute('src', './image.png');
+            // img.setAttribute('width', 500);
+
+            img.src = './image.png';
+            img.width = 500;
+
+            // document.body.appendChild(img);
+            document.getElementById('div1').appendChild(img);
+        };
+
+        const deleteTag = function() {
+            document.getElementById('div1').innerHTML = '';
+        };
+
+    </script>
+</head>
+<body>
+    <input type="button" value="속성 추가" onclick="createAttr()" />
+    <input type="button" value="태그 제거" onclick="deleteTag()" />
+    <br /><hr /><br />
+    <div id="div1"></div>
+</body>
+
+</html>

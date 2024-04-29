@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const insertTag = function() {
+            let div1 = document.getElementById('div1');
+            
+            let output = '<ul>';
+            output += '<li>사과</li>';
+            output += '<li>수박</li>';
+            output += '<li>딸기</li>';
+            output += '</ul>';
+
+            // overwriting
+            //div1.innerHTML = output
+            // appending
+            div1.innerHTML += output;
+            // html 적용 안되고 그대로 
+            div1.textContent = output;
+
+            
+        };
+
+    </script>
+</head>
+<body>
+    <input type="button" value="tag 추가" onclick="insertTag()" />
+    <br /><hr /><br />
+    <div id="div1"></div>
+</body>
+
+</html>

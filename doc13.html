@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // html 태그 클래스에 대한 배열과 유사
+        // getElementsByTagName()
+        const viewTag = function() {
+            // let h2s = document.getElementsByTagName('h2');
+            let h2s = document.getElementsByClassName('c1');
+            console.log(h2s);
+            console.log(h2s.length);
+            // console.log(h2s[0]);
+
+            for(let i=0; i<h2s.length; i++) {
+                console.log(h2s[i]);
+            }
+        };
+    </script>
+</head>
+<body>
+    <input type="button" value="tag 보기" onclick="viewTag()" />
+    <br /><hr /><br />
+    <h2 id="h1" class="c1">Header 1</h2>
+    <h2 id="h2" class="c2">Header 2</h2>
+    <h2 id="h3" class="c1">Header 3</h2>
+</body>
+
+</html>

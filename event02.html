@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #d1 {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function() {
+            let btn1 = document.getElementById('d1');
+            btn1.onmouseover = function() {
+                console.log('over');
+            }
+            btn1.onmouseout = function() {
+                console.log('out');
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="d1"></div>
+</body>
+</html>

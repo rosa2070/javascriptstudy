@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 검색어가 2자이상 되어야 검색진행
+        const search = function() {
+            if (document.frm.query.value.length>=2) {
+                switch(document.frm.sitename.options.selectedIndex) {
+                    case 0:
+                        location.href = 'https://search.naver.com/search.naver?query=' + document.frm.query.value;
+                        break;
+                    case 1:
+                        location.href = 'https://search.daum.net/search?q=' + document.frm.query.value;
+                        break;
+                    case 2:
+                        location.href = 'https://www.google.com/search?q=' + document.frm.query.value;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="frm">
+        검색어 : <input type="text" name="query" placeholder="검색어 입력" />
+        <select name="sitename">
+            <option>네이버</option>
+            <option selected>다  음</option>
+            <option>구  글</option>
+        </select>
+        <input type="button" value="검색페이지 이동" onclick="search()"/>
+    </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // html 태그 - 선택 / 추가 /삭제
+        // 문자열 - 객체(DOM Tree)
+        // getElementsByTagName() - 동일 태그가 여러개
+        // CSS
+        // getElementsByClassName()
+        // getElementsById() - 반드시 한개
+        // querySelector()
+
+        // getElementById()
+        const viewTag = function() {
+            // h1 - 문자열이 아니고 html tag 객체
+            let h1 = document.getElementById('h1');
+            console.log(h1);
+
+            let h2 = document.getElementById('h2');
+            console.log(h2);
+
+
+        };
+    </script>
+</head>
+<body>
+    <input type="button" value="tag 보기" onclick="viewTag()" />
+    <br /><hr /><br />
+    <h2 id="h1">Header 1</h2>
+    <h2 id="h2">Header 2</h2>
+</body>
+
+</html>

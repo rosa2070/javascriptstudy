@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const viewCalendar = function() {
+            const year = document.frm.year.options[document.frm.year.options.selectedIndex].value;
+            const month = document.frm.month.options[document.frm.month.options.selectedIndex].value;
+
+            const startCalendar = new Date(year, month -1, 1);
+            const endCalendar = new Date(year, month, 1-1);
+            
+            const startDayOfWeek = startCalendar.getDay() + 1;
+            const endDate = endCalendar.getDate();
+            const endDayofWeek = endCalendar.getDay() + 1;
+
+            // console.log(startDayOfWeek, endDate, endDayofWeek);
+
+            let html = '<table border="1" width="800" height="600" cellspacing="0">';
+            html += '<tr>';
+            html += '<th>일요일</th>';
+            html += '<th>월요일</th>';
+            html += '<th>화요일</th>';
+            html += '<th>수요일</th>';
+            html += '<th>목요일</th>';
+            html += '<th>금요일</th>';
+            html += '<th>토요일</th>';
+            html += '</tr>';
+
+            html += '<tr>';
+            for (let i=1; i<startDayOfWeek; i++) {
+                html += '<td></td>';
+            }
+
+            for(let i=1, n=startDayOfWeek; i<=endDate; i++, n++) {
+                if (n % 7 == 1) {
+                    html += '<tr>';
+                }
+
+                html += '<td>' + i + '</td>';
+
+                if (n % 7 == 0) {
+                    html += '</tr>';
+                }
+            } 
+
+            for (let i=endDayofWeek; i<=6; i++) {
+                html += '<td></td>';
+            }
+
+            html += '</tr>';
+            html += '</table>';
+
+            // console.log(html);
+
+            const div = document.getElementById('result');
+            div.innerHTML = html; 
+
+        }
+
+    </script>
+</head>
+<body>
+<table>
+<tr>
+    <td>
+        <form name="frm">
+            년 : 
+            <select name="year">
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+            </select>
+            월 : 
+            <select name="month">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <input type="button" value="달력 보기" onclick="viewCalendar()" />
+        </form>
+    </td>
+</tr>
+</table>  
+
+<br /><hr /><br />
+
+<div id="result"></div>
+    
+</body>
+</html>

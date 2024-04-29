@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        const creatTag = function() {
+            let header = document.createElement('h2');
+            let text = document.createTextNode('Hello DOM');
+
+            header.appendChild(text);
+            // document.body.appendChild(header);
+
+            document.getElementById('div1').appendChild(header);
+        
+        };
+
+    </script>
+</head>
+<body>
+    <input type="button" value="tag 추가" onclick="creatTag()" />
+    <br /><hr /><br />
+    <div id="div1"></div>
+</body>
+
+</html>

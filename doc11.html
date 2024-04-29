@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,19 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script type="text/javascript">
-        // 검색어가 2자이상 되어야 검색진행
-        const search = function() {
-            if (document.frm.query.value.length>=2) {
-                switch(document.frm.sitename.options.selectedIndex) {
-                    case 0:
-                        location.href = 'https://search.naver.com/search.naver?query=' + document.frm.query.value;
+        // 검색어가 2자이상 되어야 검색진행        
+        const goSearch = function() {
+            const query = document.frm.query.value;
+            // 입력값 검사
+            if( query.length < 2 ) {
+                // 잘못 입력
+                alert( '2자 이상의 검색어를 입력하셔야 합니다.' );
+            } else {
+                // 정상 입력
+                //console.log( '정상 입력' );
+
+                const sitename = document.frm.sitename.options[document.frm.sitename.options.selectedIndex].value;
+                //console.log( sitename );
+
+                // https://search.naver.com/search.naver?query=%EC%B6%95%EA%B5%AC
+                // https://search.daum.net/search?q=%EC%B6%95%EA%B5%AC
+                // https://www.google.com/search?q=%EC%B6%95%EA%B5%AC
+                let url = '';
+                switch( sitename ) {
+                    case 'naver':
+                        url = 'https://search.naver.com/search.naver?query=' + query;
                         break;
-                    case 1:
-                        location.href = 'https://search.daum.net/search?q=' + document.frm.query.value;
+                    case 'daum':
+                        url = 'https://search.daum.net/search?q=' + query;
                         break;
-                    case 2:
-                        location.href = 'https://www.google.com/search?q=' + document.frm.query.value;
+                    case 'google':
+                        url = 'https://www.google.com/search?q=' + query;
                 }
+
+                //console.log( url );
+
+                location.href = url;
             }
         }
     </script>
@@ -26,11 +46,11 @@
     <form name="frm">
         검색어 : <input type="text" name="query" placeholder="검색어 입력" />
         <select name="sitename">
-            <option>네이버</option>
-            <option selected>다  음</option>
-            <option>구  글</option>
+            <option value="naver">네이버</option>
+            <option value="daum" selected>다  음</option>
+            <option value="google">구  글</option>
         </select>
-        <input type="button" value="검색페이지 이동" onclick="search()"/>
+        <input type="button" value="검색페이지 이동" onclick="goSearch()"/>
     </form>
 </body>
 </html>
